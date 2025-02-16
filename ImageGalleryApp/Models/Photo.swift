@@ -13,6 +13,7 @@ struct Photo: Codable, Identifiable {
     let description: String?
     let altDescription: String?
     let user: User
+    let likes: Int
 
     struct PhotoURLs: Codable {
         let small: String
@@ -23,3 +24,4 @@ struct Photo: Codable, Identifiable {
         let name: String
     }
 }
+
