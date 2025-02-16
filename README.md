@@ -7,3 +7,4 @@ ImageGalleryApp - An iOS mobile application that consist of:
 • Search Images using image name.
 • Favourite an image and list all favourites in a Favourite section view.
 • Photo Share functionality.
+• Displayed No.of liked by user.
