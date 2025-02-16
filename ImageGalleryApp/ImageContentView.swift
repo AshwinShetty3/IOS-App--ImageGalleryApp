@@ -49,13 +49,6 @@ struct ImageContentView: View {
             }
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
-//        .onAppear {
-//            ImageAPI.shared.fetchPhotos { fetchedPhotos in
-//                if let fetchedPhotos = fetchedPhotos {
-//                    photos = fetchedPhotos
-//                }
-//            }
-//        }
         
         .onAppear {
             ImageAPI.shared.fetchPhotos { result in
