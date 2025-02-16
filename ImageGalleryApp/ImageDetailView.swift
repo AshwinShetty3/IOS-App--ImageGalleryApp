@@ -70,8 +70,14 @@ struct ImageDetailView: View {
                             favourites.append(photo)
                         }
                     }) {
-                        Image(systemName: isFavourite ? "heart.fill" : "heart")
+                        
+                        HStack {
+                            Image(systemName: isFavourite ? "heart.fill" : "heart")
                             .foregroundColor(isFavourite ? .red : .gray)
+                            Text("\(photo.likes) Likes")
+                            .foregroundColor(.gray)
+                            }
+                                            
                     }
                     ShareLink(item: photo.urls.full) {
                         Image(systemName: "square.and.arrow.up")
@@ -84,3 +90,4 @@ struct ImageDetailView: View {
         .navigationTitle("Photo Detail")
     }
 }
+
