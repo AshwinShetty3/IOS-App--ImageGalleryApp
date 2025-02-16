@@ -57,7 +57,6 @@ struct ImageContentView: View {
                     photos = fetchedPhotos
                 case .failure(let error):
                     print("Error fetching photos: \(error)")
-                    // Handle error case here, maybe set an error state variable or show an alert
                 }
             }
         }
