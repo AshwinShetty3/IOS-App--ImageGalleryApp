@@ -1,4 +1,4 @@
-An iOS mobile application that:
+ImageGalleryApp - An iOS mobile application that consist of:
 
 • Fetches images from Unsplash API.
 • Tapping on an image, presents the selected image in full screen along with image details.
