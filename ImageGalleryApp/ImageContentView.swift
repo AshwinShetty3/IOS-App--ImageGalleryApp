@@ -49,14 +49,26 @@ struct ImageContentView: View {
             }
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
+//        .onAppear {
+//            ImageAPI.shared.fetchPhotos { fetchedPhotos in
+//                if let fetchedPhotos = fetchedPhotos {
+//                    photos = fetchedPhotos
+//                }
+//            }
+//        }
+        
         .onAppear {
-            ImageAPI.shared.fetchPhotos { fetchedPhotos in
-                if let fetchedPhotos = fetchedPhotos {
+            ImageAPI.shared.fetchPhotos { result in
+                switch result {
+                case .success(let fetchedPhotos):
                     photos = fetchedPhotos
+                case .failure(let error):
+                    print("Error fetching photos: \(error)")
+                    // Handle error case here, maybe set an error state variable or show an alert
                 }
             }
         }
 
+
     }
 }
-
